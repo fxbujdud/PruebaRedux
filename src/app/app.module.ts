@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RoutesModule } from './routes/routes.module';
+import { RouterModule, Routes } from '@angular/router';
+import { routes } from './routes/routes.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import { RoutesModule } from './routes/routes.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RoutesModule
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
